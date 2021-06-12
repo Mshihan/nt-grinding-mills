@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useState } from "react";
+import SideBar from "./components/SideBar";
+import TopBar from "./components/TopBar";
 function App() {
+  const [isSideBarOpen, setIsSideBarOpen] = useState(true);
+  const [isExpandedProjects, setIsExpandedProjects] = useState();
+
+  const homeClass = isSideBarOpen ? "home sideBarOpen" : "home sideBarClose";
+  const onClickSideBarOpenHandler = () => {
+    setIsSideBarOpen((previousStatus) => !previousStatus);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SideBar
+        isSideBarOpen={isSideBarOpen}
+        onClickSideBarOpenHandler={onClickSideBarOpenHandler}
+        setIsExpandedProjects={setIsExpandedProjects}
+        isExpandedProjects={isExpandedProjects}
+      />
+      <div className={homeClass}>
+        <TopBar />
+      </div>
+    </>
   );
 }
 
