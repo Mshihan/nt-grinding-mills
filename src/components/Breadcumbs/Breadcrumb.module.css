@@ -1,3 +1,25 @@
 .breadcrumb {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+}
+
+.breadcrumbNotActivated {
+  display: flex;
+  text-decoration: none;
+  font-size: 0.76rem;
+}
+
+.breadcrumbNotActivated:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
 }

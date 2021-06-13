@@ -1,0 +1,8 @@
+a {
+  color: #404040;
+}
+
+a:active {
+  color: black;
+  font-weight: bold;
+}

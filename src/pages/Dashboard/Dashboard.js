@@ -1,9 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BreadcrumbBar from "../../components/Breadcumbs/BreadcrumbBar";
+import { Dashboard_Link } from "../../components/Breadcumbs/BreadCrumbLinks";
 import "./Dashboard.module.css";
 
-import DashboardCard from "./DashboardComponent/Utility/DashboardCard";
+// import DashboardCard from "./DashboardComponent/Utility/DashboardCard";
 import {
   Dashboard_Items_Fifth_Row,
   Dashboard_Items_First_Row,
@@ -22,20 +23,18 @@ const Dashboard = (props) => {
 
   return (
     <>
-      <div className="dashboard">
-        <div className="d-flex content-align-center justify-content-between mx-3">
-          <h5 className="h5">DAHSBOARD</h5>
-          <div>
-            <BreadcrumbBar />
-          </div>
+      <div className="d-flex content-align-center justify-content-between mx-3">
+        <h5 className="h5">DAHSBOARD</h5>
+        <div>
+          <BreadcrumbBar currentLink={Dashboard_Link} activeLinks={[]} />
         </div>
-
-        <div className="row">{firstRow}</div>
-        <div className="row">{secondRow}</div>
-        <div className="row">{thirdRow}</div>
-        <div className="row">{fourthRow}</div>
-        <div className="row">{fifthRow}</div>
       </div>
+
+      <div className="row">{firstRow}</div>
+      <div className="row">{secondRow}</div>
+      <div className="row">{thirdRow}</div>
+      <div className="row">{fourthRow}</div>
+      <div className="row">{fifthRow}</div>
     </>
   );
 };

@@ -17,7 +17,7 @@ const SideBar = (props) => {
   return (
     <>
       <div className={navBarClasses} id="sideBar">
-        <div href="/" className="nav__brand bg-white  rounded">
+        <div href="/" className="nav__brand bg-white rounded">
           <FontAwesomeIcon
             onClick={props.onClickSideBarOpenHandler}
             icon={faBars}
@@ -29,8 +29,8 @@ const SideBar = (props) => {
         </div>
         <div className="sideBarNavigationLink">
           <NavLink
-            to="/home"
-            class="nav__link"
+            to="/dashboard"
+            className="nav__link"
             activeClassName="activeSideBar"
             style={{ textDecoration: "none" }}
           >
@@ -38,45 +38,51 @@ const SideBar = (props) => {
             <span class="nav__name">Dashboard</span>
           </NavLink>
 
-          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+          <NavLink
+            to="/customers"
+            className="nav__link"
+            activeClassName="activeSideBar"
+            style={{ textDecoration: "none" }}
+          >
             <FontAwesomeIcon icon={faUser} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faHome} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
-          </a>
+            <span class="nav__name">Customer</span>
+          </NavLink>
 
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
             <FontAwesomeIcon icon={faHome} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
-          </a>
+          </a> */}
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
 
-          <div
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+            <FontAwesomeIcon icon={faHome} className="nav__icon" />
+            <span class="nav__name">Dashboard</span>
+          </a> */}
+
+          {/* <div
             class="nav__link collapseSideBar"
             onClick={() => props.setIsExpandedProjects((previous) => !previous)}
           >
@@ -113,7 +119,6 @@ const SideBar = (props) => {
               </div>
             </Collapse>
           </div>
-       
         */}
         </div>
       </div>

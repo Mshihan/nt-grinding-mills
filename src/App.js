@@ -26,15 +26,17 @@ const App = () => {
       <div className={homeClass}>
         <TopBar />
         <BodyMargin>
-          <Route path="/home">
-            <h1>Home</h1>
+          <Route path="/" exact>
+            <Redirect to="/dashboard" />
           </Route>
-          {/* <Route path="/" exact>
-            <Redirect to="/" />
-          </Route> */}
-
+          <Route path="/customers" exact>
+            <h1>Customer</h1>
+          </Route>
           <Route path="/dashboard" exact>
             <Dashboard />
+          </Route>
+          <Route path="*">
+            <Redirect to="/dashboard" />
           </Route>
         </BodyMargin>
       </div>

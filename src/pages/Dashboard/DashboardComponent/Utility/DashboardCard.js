@@ -11,6 +11,8 @@ import {
   faUser,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import "./DashboardCard.css";
 
 let icon;
 const findIcon = (icon) => {
@@ -41,29 +43,33 @@ const findIcon = (icon) => {
 
 const DashboardCard = (props) => {
   icon = findIcon(props.icon);
+
+  const { link } = props;
   return (
-    <div
-      className={`d-flex align-items-center rounded mx-3 border`}
-      style={{ height: 100, overflow: "hidden", background: "#ecf0f5" }}
-    >
+    <NavLink to={link} activeClassName="activeLinkClassName">
       <div
-        style={{ height: 100, width: 100, background: props.iconColor }}
-        className={`d-flex align-items-center justify-content-center `}
+        className={`d-flex align-items-center rounded mx-3 border`}
+        style={{ height: 100, overflow: "hidden", background: "#ecf0f5" }}
       >
-        <FontAwesomeIcon
-          icon={icon}
-          style={{ fontSize: 40, color: "#ecf0f5" }}
-        />
+        <div
+          style={{ height: 100, width: 100, background: props.iconColor }}
+          className={`d-flex align-items-center justify-content-center `}
+        >
+          <FontAwesomeIcon
+            icon={icon}
+            style={{ fontSize: 40, color: "#ecf0f5" }}
+          />
+        </div>
+        <div className="d-flex flex-column">
+          <p style={{ fontSize: 13 }} className="mx-3 my-0 text-uppercase">
+            {props.heading}
+          </p>
+          <p style={{ fontWeight: "w600" }} className="mx-3">
+            {props.title}
+          </p>
+        </div>
       </div>
-      <div className="d-flex flex-column">
-        <p style={{ fontSize: 13 }} className="mx-3 my-0 text-uppercase">
-          {props.heading}
-        </p>
-        <p style={{ fontWeight: "bold" }} className="mx-3">
-          {props.title}
-        </p>
-      </div>
-    </div>
+    </NavLink>
   );
 };
 
