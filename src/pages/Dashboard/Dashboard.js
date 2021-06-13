@@ -50,7 +50,7 @@ const cardItemFetching = (ItemsList, last = true) => {
 const Dashboard = (props) => {
   const firstRow = cardItemFetching(Dashboard_Items_First_Row, true);
   const secondRow = cardItemFetching(Dashboard_Items_Second_Row, true);
-  const thirdRow = cardItemFetching(Dashboard_Items_Third_Row), true;
+  const thirdRow = cardItemFetching(Dashboard_Items_Third_Row, true);
   const fourthRow = cardItemFetching(Dashboard_Items_Forth_Row, true);
   const fifthRow = cardItemFetching(Dashboard_Items_Fifth_Row, false);
 
