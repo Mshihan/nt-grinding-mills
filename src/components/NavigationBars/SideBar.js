@@ -28,7 +28,7 @@ const SideBar = (props) => {
         <div className="sideBarNavigationLink">
           <a
             href="/"
-            class="nav__link active"
+            class="nav__link activeSideBar"
             style={{ textDecoration: "none" }}
           >
             <FontAwesomeIcon icon={faTh} className="nav__icon" />

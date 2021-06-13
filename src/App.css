@@ -1,14 +1,11 @@
-/*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
-/*===== VARIABLES CSS =====*/
+/* ================================ */
+/* Google Fonts Import for Body */
+/* ================================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ================================ */
+/* Variable Assigning */
+/* ================================ */
 :root {
-  /* --nav-width: 80px; */
-  /* --nav-width: 80px; */
-
-  /* --nav-expand-width: 250px; */
-
-  /*===== Colores =====*/
   --first-color: #0c5df4;
   --bg-color: #12192c;
   --sub-color: #b6cefc;
@@ -63,6 +60,7 @@
   justify-content: start;
   align-items: center;
   margin-bottom: 1rem;
+  cursor: point;
 }
 
 .nav__link {
@@ -91,7 +89,7 @@ a {
   color: #428bca;
   text-decoration: none;
 }
-.active {
+.activeSideBar {
   background-color: var(--first-color);
 }
 
@@ -101,7 +99,10 @@ a:focus {
   text-decoration: underline;
 }
 
-/*===== COLLAPSE =====*/
+/* ================================ */
+/* Collapse Slide Bar Customization */
+/* ================================ */
+
 .collapseSideBar {
   grid-template-columns: 20px max-content 1fr;
 }
@@ -119,7 +120,12 @@ a:focus {
 }
 .collapse__sublink:hover {
   color: var(--white-color);
+  font-weight: bold;
 }
+
+/* =============================== */
+/* Sidebar Scorllbar Customization */
+/* =============================== */
 
 #sideBar {
   overflow: hidden;

@@ -5,7 +5,10 @@ import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 const TopBar = (props) => {
   return (
     <Navbar color="dark row">
-      <div className="px-5 d-flex justify-content-between">
+      <div
+        className="d-flex justify-content-between"
+        style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
+      >
         <NavbarBrand style={{ textDecoration: "none" }}>
           <h4 className="text-white text-uppercase  font-weight-bold my-2">
             NT Grindings
