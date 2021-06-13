@@ -1,13 +1,5 @@
-import {
-  faBars,
-  faCaretDown,
-  faFolder,
-  faHome,
-  faTh,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTh, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Collapse } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import "./SideBar.css";
 

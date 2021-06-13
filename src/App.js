@@ -4,7 +4,8 @@ import SideBar from "./components/NavigationBars/SideBar";
 import TopBar from "./components/NavigationBars/TopBar";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import BodyMargin from "./components/WrapperComponents/BodyMargin";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
+import Customers from "./pages/Customer/Customers";
 
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
@@ -30,7 +31,7 @@ const App = () => {
             <Redirect to="/dashboard" />
           </Route>
           <Route path="/customers" exact>
-            <h1>Customer</h1>
+            <Customers />
           </Route>
           <Route path="/dashboard" exact>
             <Dashboard />
