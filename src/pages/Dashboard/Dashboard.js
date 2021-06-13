@@ -3,56 +3,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BreadcrumbBar from "../../components/Breadcumbs/BreadcrumbBar";
 import "./Dashboard.module.css";
 
-import DashboardCard from "./DashboardComponent/DashboardCard";
+import DashboardCard from "./DashboardComponent/Utility/DashboardCard";
 import {
   Dashboard_Items_Fifth_Row,
   Dashboard_Items_First_Row,
   Dashboard_Items_Forth_Row,
   Dashboard_Items_Second_Row,
   Dashboard_Items_Third_Row,
+  CardItemFetching,
 } from "./DashboardComponent/DashboardItems";
 
-const cardItemFetching = (ItemsList, last = true) => {
-  if (last) {
-    return ItemsList.map((card) => {
-      return (
-        <div className="col-md my-1">
-          <DashboardCard
-            icon={card.icon}
-            heading={card.heading}
-            title={card.title}
-            iconColor={card.iconColor}
-          />
-        </div>
-      );
-    });
-  } else {
-    return ItemsList.map((card) => {
-      return (
-        <>
-          <div className="col-md my-1">
-            <DashboardCard
-              icon={card.icon}
-              heading={card.heading}
-              title={card.title}
-              iconColor={card.iconColor}
-            />
-          </div>
-
-          <div className="col-md my-1"></div>
-          <div className="col-md my-1"></div>
-          <div className="col-md my-1"></div>
-        </>
-      );
-    });
-  }
-};
 const Dashboard = (props) => {
-  const firstRow = cardItemFetching(Dashboard_Items_First_Row, true);
-  const secondRow = cardItemFetching(Dashboard_Items_Second_Row, true);
-  const thirdRow = cardItemFetching(Dashboard_Items_Third_Row, true);
-  const fourthRow = cardItemFetching(Dashboard_Items_Forth_Row, true);
-  const fifthRow = cardItemFetching(Dashboard_Items_Fifth_Row, false);
+  const firstRow = CardItemFetching(Dashboard_Items_First_Row, true);
+  const secondRow = CardItemFetching(Dashboard_Items_Second_Row, true);
+  const thirdRow = CardItemFetching(Dashboard_Items_Third_Row, true);
+  const fourthRow = CardItemFetching(Dashboard_Items_Forth_Row, true);
+  const fifthRow = CardItemFetching(Dashboard_Items_Fifth_Row, false);
 
   return (
     <>

@@ -1,3 +1,5 @@
+import DashboardCard from "./Utility/DashboardCard";
+
 export const Dashboard_Items_First_Row = [
   {
     icon: "faUser",
@@ -114,3 +116,39 @@ export const Dashboard_Items_Fifth_Row = [
     iconColor: "#DD4B39",
   },
 ];
+
+export const CardItemFetching = (ItemsList, last = true) => {
+  if (last) {
+    return ItemsList.map((card) => {
+      return (
+        <div className="col-md my-1">
+          <DashboardCard
+            icon={card.icon}
+            heading={card.heading}
+            title={card.title}
+            iconColor={card.iconColor}
+          />
+        </div>
+      );
+    });
+  } else {
+    return ItemsList.map((card) => {
+      return (
+        <>
+          <div className="col-md my-1">
+            <DashboardCard
+              icon={card.icon}
+              heading={card.heading}
+              title={card.title}
+              iconColor={card.iconColor}
+            />
+          </div>
+
+          <div className="col-md my-1"></div>
+          <div className="col-md my-1"></div>
+          <div className="col-md my-1"></div>
+        </>
+      );
+    });
+  }
+};

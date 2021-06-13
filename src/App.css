@@ -63,42 +63,6 @@
   cursor: point;
 }
 
-.nav__link {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  align-items: center;
-  column-gap: 1rem;
-  padding: 0.75rem;
-  color: var(--white-color);
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-  transition: 0.3s;
-  cursor: pointer;
-  overflow: hidden;
-}
-.nav__name {
-  font-size: var(--small-font-size);
-}
-
-.nav__link:hover {
-  background-color: var(--first-color);
-  color: white;
-}
-
-a {
-  color: #428bca;
-  text-decoration: none;
-}
-.activeSideBar {
-  background-color: var(--first-color);
-}
-
-a:hover,
-a:focus {
-  color: #2a6496;
-  text-decoration: underline;
-}
-
 /* ================================ */
 /* Collapse Slide Bar Customization */
 /* ================================ */
@@ -121,38 +85,4 @@ a:focus {
 .collapse__sublink:hover {
   color: var(--white-color);
   font-weight: bold;
-}
-
-/* =============================== */
-/* Sidebar Scorllbar Customization */
-/* =============================== */
-
-#sideBar {
-  overflow: hidden;
-  z-index: 1000000;
-}
-
-#sideBar:hover {
-  overflow-y: auto;
-}
-
-#sideBar::-webkit-scrollbar {
-  width: 8px;
-  height: 16px;
-}
-
-#sideBar::-webkit-scrollbar-button {
-  width: 0;
-  height: 0;
-  display: none;
-}
-
-#sideBar::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-#sideBar::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
 }

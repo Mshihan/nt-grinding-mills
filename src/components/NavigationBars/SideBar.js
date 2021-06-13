@@ -8,6 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Collapse } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import "./SideBar.css";
 
 const SideBar = (props) => {
   const navBarClasses = props.isSideBarOpen ? "sidebar open" : "sidebar close";
@@ -26,16 +28,17 @@ const SideBar = (props) => {
           </div>
         </div>
         <div className="sideBarNavigationLink">
-          <a
-            href="/"
-            class="nav__link activeSideBar"
+          <NavLink
+            to="/home"
+            class="nav__link"
+            activeClassName="activeSideBar"
             style={{ textDecoration: "none" }}
           >
             <FontAwesomeIcon icon={faTh} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
-          </a>
+          </NavLink>
 
-          <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
+          {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
             <FontAwesomeIcon icon={faUser} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
           </a>
@@ -77,7 +80,6 @@ const SideBar = (props) => {
             class="nav__link collapseSideBar"
             onClick={() => props.setIsExpandedProjects((previous) => !previous)}
           >
-            {/* collapse */}
             <FontAwesomeIcon icon={faFolder} className="nav__icon" />
             <span class="nav__name">Projects</span>
             <FontAwesomeIcon
@@ -111,6 +113,8 @@ const SideBar = (props) => {
               </div>
             </Collapse>
           </div>
+       
+        */}
         </div>
       </div>
     </>
