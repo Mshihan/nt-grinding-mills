@@ -13,7 +13,7 @@ const AllJobs = (props) => {
   return (
     <>
       <div className="d-flex content-align-center justify-content-between mx-3">
-        <h5 className="h5">ALL JOBS</h5>
+        <h5 className="h5">ALL JOB CARDS</h5>
         <div>
           <BreadcrumbBar currentLink={AllJobs_Link} activeLinks={[]} />
         </div>

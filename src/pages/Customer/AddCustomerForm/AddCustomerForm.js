@@ -133,12 +133,15 @@ const AddCustomerForm = (props) => {
             </div>
             <div className="row">
               <div className="d-flex justify-content-end my-4">
-                <button type="submit" className="btn btn-outline-primary mx-3">
+                <button
+                  type="submit"
+                  className="btn btn-sm btn-outline-primary mx-3"
+                >
                   Submit
                 </button>
                 <button
                   type="button"
-                  className="btn btn-outline-danger"
+                  className="btn btn-outline-danger btn-sm"
                   onClick={props.onClickCloseAddNewCustomerForm}
                 >
                   Cancel
