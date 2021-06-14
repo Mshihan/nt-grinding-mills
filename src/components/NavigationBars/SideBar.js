@@ -27,7 +27,7 @@ const SideBar = (props) => {
             style={{ textDecoration: "none" }}
           >
             <FontAwesomeIcon icon={faTh} className="nav__icon" />
-            <span class="nav__name">Dashboard</span>
+            <span className="nav__name">Dashboard</span>
           </NavLink>
 
           <NavLink
@@ -37,7 +37,7 @@ const SideBar = (props) => {
             style={{ textDecoration: "none" }}
           >
             <FontAwesomeIcon icon={faUser} className="nav__icon" />
-            <span class="nav__name">Customers</span>
+            <span className="nav__name">Customers</span>
           </NavLink>
 
           {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>

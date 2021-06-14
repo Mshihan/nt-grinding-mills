@@ -29,3 +29,8 @@
   margin: 0 !important;
   padding: 0 !important;
 }
+
+.rdt_TableHead {
+  color: white;
+  background-color: gray;
+}

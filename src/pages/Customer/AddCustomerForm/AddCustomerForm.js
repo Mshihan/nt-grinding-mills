@@ -63,7 +63,7 @@ const AddCustomerForm = (props) => {
               <div className=" col-lg-4">
                 {/* Customer Type */}
                 <div class="form-group">
-                  <label for="customer type">Customer Type</label>
+                  <label>Customer Type</label>
                   <select id="customerType" class="form-control">
                     <option>-Select-</option>
                     <option>Cash</option>
@@ -72,7 +72,7 @@ const AddCustomerForm = (props) => {
                 </div>
                 {/* Title */}
                 <div class="form-group">
-                  <label for="Title">Title</label>
+                  <label>Title</label>
                   <select class="form-control">
                     <option>-Select-</option>
                     <option>Ms</option>
@@ -147,7 +147,9 @@ const AddCustomerForm = (props) => {
         </form>
       </Collapse>
 
-      <Table data={Data} click={clickhandler} />
+      <div className="mx-3 px-5 mt-4 border border-dark py-3">
+        <Table data={Data} click={clickhandler} />
+      </div>
     </LoadingOverlay>
   );
 };

@@ -10,7 +10,7 @@ const Table = (props) => {
       secondary: "#000000DD",
     },
     background: {
-      default: "#FAFAFA",
+      default: "#FFFFFF",
     },
     context: {
       background: "red",

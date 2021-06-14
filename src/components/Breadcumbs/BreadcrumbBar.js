@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const BreadcrumbBar = (props) => {
   const activeLinks = props.activeLinks.map((link) => {
     return (
-      <BreadcrumbItem className={classes.breadcrumbNotActivated}>
+      <BreadcrumbItem
+        className={classes.breadcrumbNotActivated}
+        key={props.link}
+      >
         <Link to={link.link}>{link.activeTitle}</Link>
       </BreadcrumbItem>
     );
@@ -13,7 +16,7 @@ const BreadcrumbBar = (props) => {
 
   const currentLink = props.currentLink.map((link) => {
     return (
-      <BreadcrumbItem className={classes.breadcrumb} active>
+      <BreadcrumbItem className={classes.breadcrumb} key={props.link} active>
         {link.currentTitle}
       </BreadcrumbItem>
     );

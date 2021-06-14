@@ -138,7 +138,7 @@ export const CardItemFetching = (ItemsList, last = true) => {
   if (last) {
     return ItemsList.map((card) => {
       return (
-        <div className="col-md my-1">
+        <div className="col-md my-1" key={card.title}>
           <DashboardCard
             icon={card.icon}
             heading={card.heading}
@@ -153,7 +153,7 @@ export const CardItemFetching = (ItemsList, last = true) => {
     return ItemsList.map((card) => {
       return (
         <>
-          <div className="col-md my-1">
+          <div className="col-md my-1" key={card.title}>
             <DashboardCard
               icon={card.icon}
               heading={card.heading}
