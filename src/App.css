@@ -23,6 +23,7 @@
 
 .home {
   transition: 0.9s;
+  overflow: hidden;
 }
 
 .sideBarOpen {

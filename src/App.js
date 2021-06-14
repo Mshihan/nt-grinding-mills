@@ -11,7 +11,7 @@ import Login from "./pages/Login/Login";
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   const [isExpandedProjects, setIsExpandedProjects] = useState();
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const homeClass = isSideBarOpen ? "home sideBarOpen" : "home sideBarClose";
   const onClickSideBarOpenHandler = () => {
@@ -33,7 +33,7 @@ const App = () => {
             isExpandedProjects={isExpandedProjects}
           />
           <div className={homeClass}>
-            <TopBar />
+            <TopBar logOut={onLoginHandler} />
             <BodyMargin>
               <Route path="/" exact>
                 <Redirect to="/customers" />

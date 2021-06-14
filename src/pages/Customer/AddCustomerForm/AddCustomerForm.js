@@ -147,7 +147,7 @@ const AddCustomerForm = (props) => {
         </form>
       </Collapse>
 
-      <div className="mx-3 px-5 mt-4 border border-dark py-3">
+      <div className="mx-2 px-4 mt-4 border border-dark py-3">
         <Table data={Data} click={clickhandler} />
       </div>
     </LoadingOverlay>

@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 const TopBar = (props) => {
+  const logoutHandler = () => {
+    props.logOut();
+  };
   return (
     <Navbar style={{ backgroundColor: "#12192c" }} className="row">
       <div
@@ -15,6 +18,7 @@ const TopBar = (props) => {
           </h4>
         </NavbarBrand>
         <FontAwesomeIcon
+          onClick={logoutHandler}
           icon={faSignOutAlt}
           className="align-self-center"
           style={{ color: "white" }}
