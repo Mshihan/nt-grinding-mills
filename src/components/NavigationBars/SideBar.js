@@ -1,7 +1,15 @@
-import { faBars, faTh, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faBook,
+  faFolder,
+  faTh,
+  faUser,
+  faCaretDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./SideBar.css";
+import { Collapse } from "reactstrap";
 
 const SideBar = (props) => {
   const navBarClasses = props.isSideBarOpen ? "sidebar open" : "sidebar close";
@@ -29,7 +37,6 @@ const SideBar = (props) => {
             <FontAwesomeIcon icon={faTh} className="nav__icon" />
             <span className="nav__name">Dashboard</span>
           </NavLink>
-
           <NavLink
             to="/customers"
             className="nav__link"
@@ -39,7 +46,15 @@ const SideBar = (props) => {
             <FontAwesomeIcon icon={faUser} className="nav__icon" />
             <span className="nav__name">Customers</span>
           </NavLink>
-
+          {/* <NavLink
+            to="/alljobs"
+            className="nav__link"
+            activeClassName="activeSideBar"
+            style={{ textDecoration: "none" }}
+          >
+            <FontAwesomeIcon icon={faBook} className="nav__icon" />
+            <span className="nav__name">Jobs</span>
+          </NavLink> */}
           {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
             <FontAwesomeIcon icon={faHome} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
@@ -68,50 +83,31 @@ const SideBar = (props) => {
             <FontAwesomeIcon icon={faHome} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
           </a> */}
-
           {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
             <FontAwesomeIcon icon={faHome} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
           </a> */}
-
-          {/* <div
-            class="nav__link collapseSideBar"
+          <NavLink
+            activeClassName="activeSideBarCollapse"
+            to="/alljobs"
+            className="nav__linkCollapse collapseSideBar"
             onClick={() => props.setIsExpandedProjects((previous) => !previous)}
           >
-            <FontAwesomeIcon icon={faFolder} className="nav__icon" />
-            <span class="nav__name">Projects</span>
-            <FontAwesomeIcon
-              icon={faCaretDown}
-              className="collapse__link align-self-end"
-            />
-
+            <FontAwesomeIcon icon={faBook} className="nav__icon" />
+            <span class="nav__name">Jobs</span>
+            <FontAwesomeIcon icon={faCaretDown} className="nav__icon" />
             <Collapse isOpen={props.isExpandedProjects}>
-              <div className="row mx-4 mt-2 ">
-                <a
-                  href="/"
-                  class="collapse__sublink mt-2 "
+              <div className="mt-2 ">
+                <Link
+                  to="/allJobs"
+                  class="collapse__sublink row mx-4 "
                   style={{ textDecoration: "none" }}
                 >
-                  Data
-                </a>
-                <a
-                  href="/"
-                  class="collapse__sublink mt-1"
-                  style={{ textDecoration: "none" }}
-                >
-                  Group
-                </a>
-                <a
-                  href="/"
-                  class="collapse__sublink mt-1 "
-                  style={{ textDecoration: "none" }}
-                >
-                  Members
-                </a>
+                  Add New Job
+                </Link>
               </div>
             </Collapse>
-          </div>
-        */}
+          </NavLink>
         </div>
       </div>
     </>

@@ -6,8 +6,10 @@ import HashLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 import Alerts from "../../../components/Alerts/Alerts";
 
-import Table from "./Data/Table";
-import Data from "./Data/Data";
+// import Table from "./Data/Table";
+// import Data from "./Data/Data";
+import Data from "./../../../components/Data/Data";
+import Table from "./../../../components/Data/Table";
 
 const AddCustomerForm = (props) => {
   const [isLoadingAddNewUser, setIsLoadingAddNewUser] = useState(false);
@@ -147,7 +149,10 @@ const AddCustomerForm = (props) => {
         </form>
       </Collapse>
 
-      <div className="mx-2 px-4 mt-4 border border-dark py-3">
+      <div
+        className="mx-2 px-4 mt-4 border border-dark py-3"
+        style={{ backgroundColor: "#DBDBDB" }}
+      >
         <Table data={Data} click={clickhandler} />
       </div>
     </LoadingOverlay>

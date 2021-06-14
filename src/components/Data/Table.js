@@ -7,13 +7,13 @@ const Table = (props) => {
   createTheme("solarized", {
     text: {
       primary: "#000000",
-      secondary: "#000000DD",
+      secondary: "#000000",
     },
     background: {
-      default: "#FFFFFF",
+      default: "#DBDBDB",
     },
     context: {
-      background: "red",
+      background: "#000000",
       text: "#FFFFFF",
     },
     divider: {
@@ -60,7 +60,7 @@ const Table = (props) => {
       button: true,
       cell: (row) => (
         <button
-          className="btn btn-outline-warning btn-sm"
+          className="btn btn-warning btn-sm"
           onClick={() => props.click(row.name)}
           style={{ marginRight: "5px" }}
         >
@@ -73,10 +73,10 @@ const Table = (props) => {
       button: true,
       cell: (row) => (
         <button
-          className="btn btn-sm btn-outline-dark"
+          className="btn btn-sm btn-primary"
           onClick={() => props.click(row.name)}
         >
-          Delete
+          view
         </button>
       ),
     },
@@ -117,7 +117,7 @@ const Table = (props) => {
       columns={columns}
       data={filteredItems}
       defaultSortField="name"
-      //   striped
+      striped
       pagination
       theme="solarized"
       noHeader="true"

@@ -7,6 +7,7 @@ import BodyMargin from "./components/WrapperComponents/BodyMargin";
 import { Route, Redirect } from "react-router-dom";
 import Customers from "./pages/Customer/Customers";
 import Login from "./pages/Login/Login";
+import AllJobs from "./pages/AllJobs/AllJobs";
 
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
@@ -36,10 +37,13 @@ const App = () => {
             <TopBar logOut={onLoginHandler} />
             <BodyMargin>
               <Route path="/" exact>
-                <Redirect to="/customers" />
+                <Redirect to="/dashboard" />
               </Route>
               <Route path="/customers" exact>
                 <Customers />
+              </Route>
+              <Route path="/alljobs" exact>
+                <AllJobs />
               </Route>
               <Route path="/dashboard" exact>
                 <Dashboard />

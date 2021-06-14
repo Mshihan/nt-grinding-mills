@@ -13,7 +13,7 @@ export const Dashboard_Items_First_Row = [
     heading: "jobs",
     title: "All jobs",
     iconColor: "#D81B60",
-    link: "/customers",
+    link: "/alljobs",
   },
   {
     icon: "faListAlt",
