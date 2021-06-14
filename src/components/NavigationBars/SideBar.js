@@ -37,7 +37,7 @@ const SideBar = (props) => {
             style={{ textDecoration: "none" }}
           >
             <FontAwesomeIcon icon={faUser} className="nav__icon" />
-            <span class="nav__name">Customer</span>
+            <span class="nav__name">Customers</span>
           </NavLink>
 
           {/* <a href="/" class="nav__link  " style={{ textDecoration: "none" }}>
