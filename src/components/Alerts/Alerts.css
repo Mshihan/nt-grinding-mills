@@ -1,0 +1,16 @@
+button > .close {
+  background-color: transparent; /* Green */
+  border: none;
+  color: gren;
+  padding: 2px;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  width: 20px;
+}
+
+.alertClass {
+  font-size: 0.7rem;
+}

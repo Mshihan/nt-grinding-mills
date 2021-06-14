@@ -2,26 +2,61 @@ import { Collapse } from "reactstrap";
 import "./AddCustomerForm.css";
 import LoadingOverlay from "react-loading-overlay";
 import { useState } from "react";
+import HashLoader from "react-spinners/HashLoader";
+import { css } from "@emotion/react";
+import Alerts from "../../../components/Alerts/Alerts";
+
+import Table from "./Data/Table";
+import Data from "./Data/Data";
 
 const AddCustomerForm = (props) => {
   const [isLoadingAddNewUser, setIsLoadingAddNewUser] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
+  const clickhandler = (name) => console.log("delete", name);
   const onAddNewCustomerSubmitHandler = (event) => {
     event.preventDefault();
+
+    //Api Request to add new customer
     setIsLoadingAddNewUser(true);
+    setTimeout(() => {
+      setIsLoadingAddNewUser(false);
+      showAlertMessage();
+    }, 3000);
   };
+
+  const showAlertMessage = () => {
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
+  };
+  const spinnerCss = css`
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-color: red;
+  `;
+  const alertMessage = "Added customer successfully";
+  const alertColor = "success";
   return (
     <LoadingOverlay
       active={isLoadingAddNewUser}
-      spinner
+      spinner={<HashLoader css={spinnerCss} color="white" />}
       text="Adding New Customer...."
     >
       <Collapse isOpen={props.addNewCustomerFormDisplay}>
         <form
-          className=" mx-2 my-5"
+          className=" mx-2 mt-3"
           onSubmit={onAddNewCustomerSubmitHandler}
           style={{ fontSize: ".85rem", fontWeight: "550" }}
         >
+          <Alerts
+            showAlert={showAlert}
+            title={alertMessage}
+            color={alertColor}
+          />
           <div className=" bg-light p-3 border border-dark rounded">
             <div className="row">
               <h4 className="text-center text-uppercase"> Add Customer</h4>
@@ -111,6 +146,8 @@ const AddCustomerForm = (props) => {
           </div>
         </form>
       </Collapse>
+
+      <Table data={Data} click={clickhandler} />
     </LoadingOverlay>
   );
 };

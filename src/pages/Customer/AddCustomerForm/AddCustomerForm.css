@@ -5,3 +5,20 @@ label {
 .form-control {
   font-size: 15px !important;
 }
+
+._loading_overlay_content {
+  font-weight: 600;
+}
+
+loadingSpinner {
+  color: red;
+}
+_loading_overlay_spinner {
+  color: red;
+}
+
+_loading_overlay_overlay {
+}
+
+_loading_overlay_wrapper {
+}

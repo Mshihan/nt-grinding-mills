@@ -1,0 +1,31 @@
+/* .rdt_Table {
+}
+.rdt_TableRow {
+}
+.rdt_TableCol {
+}
+.rdt_TableCol_Sortable {
+}
+.rdt_TableCell {
+}
+.rdt_TableHeader {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.rdt_TableFooter {
+}
+.rdt_TableHead {
+  margin: 0 imo !important;
+}
+.rdt_TableHeadRow {
+}
+.rdt_TableBody {
+}
+.rdt_ExpanderRow {
+} */
+
+/* Remove margin and padding  */
+.cinWRF {
+  margin: 0 !important;
+  padding: 0 !important;
+}
