@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import React from "react";
 import "./Table.css";
 import DataTable, { createTheme } from "react-data-table-component";
-import FilterComponent from "./FilterComponent";
+// import FilterComponent from "./FilterComponent";
 
 const Table = (props) => {
   createTheme("solarized", {
@@ -86,34 +86,34 @@ const Table = (props) => {
     // },
   ];
 
-  const [filterText, setFilterText] = React.useState("");
-  const [resetPaginationToggle, setResetPaginationToggle] =
-    React.useState(false);
+  // const [filterText, setFilterText] = React.useState("");
+  // const [resetPaginationToggle, setResetPaginationToggle] =
+  //   React.useState(false);
   // const filteredItems = data.filter(
   //   item => item.name && item.name.includes(filterText)
   // );
-  const filteredItems = props.data.filter(
-    (item) =>
-      JSON.stringify(item).toLowerCase().indexOf(filterText.toLowerCase()) !==
-      -1
-  );
+  // const filteredItems = props.data.filter(
+  //   (item) =>
+  //     JSON.stringify(item).toLowerCase().indexOf(filterText.toLowerCase()) !==
+  //     -1
+  // );
 
-  const subHeaderComponent = useMemo(() => {
-    const handleClear = () => {
-      if (filterText) {
-        setResetPaginationToggle(!resetPaginationToggle);
-        setFilterText("");
-      }
-    };
+  // const subHeaderComponent = useMemo(() => {
+  //   const handleClear = () => {
+  //     if (filterText) {
+  //       setResetPaginationToggle(!resetPaginationToggle);
+  //       setFilterText("");
+  //     }
+  //   };
 
-    return (
-      <FilterComponent
-        onFilter={(e) => setFilterText(e.target.value)}
-        onClear={handleClear}
-        filterText={filterText}
-      />
-    );
-  }, [filterText, resetPaginationToggle]);
+  //   return (
+  //     <FilterComponent
+  //       onFilter={(e) => setFilterText(e.target.value)}
+  //       onClear={handleClear}
+  //       filterText={filterText}
+  //     />
+  //   );
+  // }, [filterText, resetPaginationToggle]);
 
   return (
     // <DataTable
@@ -134,7 +134,7 @@ const Table = (props) => {
     <DataTable
       // title="Existing Customers"
       columns={columns}
-      data={filteredItems}
+      data={props.data}
       striped
       highlightOnHover
       // subHeader

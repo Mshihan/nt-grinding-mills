@@ -1,15 +1,12 @@
 import {
   faBars,
   faBook,
-  faFolder,
   faTh,
   faUser,
-  faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./SideBar.css";
-import { Collapse } from "reactstrap";
 
 const SideBar = (props) => {
   const navBarClasses = props.isSideBarOpen ? "sidebar open" : "sidebar close";
