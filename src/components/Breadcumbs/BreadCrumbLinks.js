@@ -6,7 +6,14 @@ export const Dashboard_Link = [
 // Customer Links //
 export const Customer_Link = [{ currentTitle: "Customer", link: "/customers" }];
 
-// Customer Links //
+// All Jobs Links //
 export const AllJobs_Link = [{ currentTitle: "All Jobs", link: "/alljobs" }];
 
-// export const Customer_Link = [{ activeTitle: "Customers", link: "/customers" }];
+// Add New Job Card Link
+export const NewJob_Link_Current = [
+  { currentTitle: "Create Job Card", link: "/alljobs/addnewjob" },
+];
+
+export const NewJob_Link_Active = [
+  { activeTitle: "All Jobs", link: "/alljobs" },
+];

@@ -46,6 +46,15 @@ const SideBar = (props) => {
             <FontAwesomeIcon icon={faUser} className="nav__icon" />
             <span className="nav__name">Customers</span>
           </NavLink>
+          <NavLink
+            to="/alljobs"
+            className="nav__link"
+            activeClassName="activeSideBar"
+            style={{ textDecoration: "none" }}
+          >
+            <FontAwesomeIcon icon={faBook} className="nav__icon" />
+            <span className="nav__name">Jobs</span>
+          </NavLink>
           {/* <NavLink
             to="/alljobs"
             className="nav__link"
@@ -87,7 +96,7 @@ const SideBar = (props) => {
             <FontAwesomeIcon icon={faHome} className="nav__icon" />
             <span class="nav__name">Dashboard</span>
           </a> */}
-          <NavLink
+          {/* <NavLink
             activeClassName="activeSideBarCollapse"
             to="/alljobs"
             className="nav__linkCollapse collapseSideBar"
@@ -107,7 +116,7 @@ const SideBar = (props) => {
                 </Link>
               </div>
             </Collapse>
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
     </>

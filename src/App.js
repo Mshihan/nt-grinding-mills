@@ -4,10 +4,11 @@ import SideBar from "./components/NavigationBars/SideBar";
 import TopBar from "./components/NavigationBars/TopBar";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import BodyMargin from "./components/WrapperComponents/BodyMargin";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import Customers from "./pages/Customer/Customers";
 import Login from "./pages/Login/Login";
 import AllJobs from "./pages/AllJobs/AllJobs";
+import NewJob from "./pages/NewJob/NewJob";
 
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
@@ -36,21 +37,26 @@ const App = () => {
           <div className={homeClass}>
             <TopBar logOut={onLoginHandler} />
             <BodyMargin>
-              <Route path="/" exact>
-                <Redirect to="/dashboard" />
-              </Route>
-              <Route path="/customers" exact>
-                <Customers />
-              </Route>
-              <Route path="/alljobs" exact>
-                <AllJobs />
-              </Route>
-              <Route path="/dashboard" exact>
-                <Dashboard />
-              </Route>
-              <Route path="*">
-                <Redirect to="/dashboard" />
-              </Route>
+              <Switch>
+                <Route path="/" exact>
+                  <Redirect to="/dashboard" />
+                </Route>
+                <Route path="/customers" exact>
+                  <Customers />
+                </Route>
+                <Route path="/alljobs" exact>
+                  <AllJobs />
+                </Route>
+                <Route path="/alljobs/addnewjob" exact>
+                  <NewJob />
+                </Route>
+                <Route path="/dashboard" exact>
+                  <Dashboard />
+                </Route>
+                <Route path="*">
+                  <Redirect to="/dashboard" />
+                </Route>
+              </Switch>
             </BodyMargin>
           </div>
         </div>

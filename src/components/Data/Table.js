@@ -112,19 +112,28 @@ const Table = (props) => {
   }, [filterText, resetPaginationToggle]);
 
   return (
+    // <DataTable
+    //   title="Existing Customers"
+    //   columns={columns}
+    //   data={filteredItems}
+    //   defaultSortField="name"
+    //   striped
+    //   pagination
+    //   theme="solarized"
+    //   noHeader="true"
+    //   subHeader
+    //   subHeaderAlign="start"
+    //   highlightOnHover="true"
+    //   subHeaderWrap="true"
+    //   subHeaderComponent={subHeaderComponent}
+    // />
     <DataTable
       title="Existing Customers"
       columns={columns}
       data={filteredItems}
-      defaultSortField="name"
       striped
-      pagination
-      theme="solarized"
-      noHeader="true"
+      highlightOnHover
       subHeader
-      subHeaderAlign="start"
-      highlightOnHover="true"
-      subHeaderWrap="true"
       subHeaderComponent={subHeaderComponent}
     />
   );

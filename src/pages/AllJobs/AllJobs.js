@@ -1,12 +1,13 @@
 import BreadcrumbBar from "../../components/Breadcumbs/BreadcrumbBar";
 import { AllJobs_Link } from "../../components/Breadcumbs/BreadCrumbLinks";
-
+import { useHistory } from "react-router";
 import Data from "./../../components/Data/Data";
 import Table from "./../../components/Data/Table";
 
 const AllJobs = (props) => {
+  const history = useHistory();
   const onClickAddNewJobHandler = () => {
-    console.log("Add New Job");
+    history.push("/alljobs/addnewjob");
   };
 
   const clickhandler = (name) => console.log("delete", name);
@@ -30,7 +31,7 @@ const AllJobs = (props) => {
       </div>
       <div
         className="mx-2 px-4 mt-4 border border-dark py-3"
-        style={{ backgroundColor: "#DBDBDB" }}
+        // style={{ backgroundColor: "#DBDBDB" }}
       >
         <Table data={Data} click={clickhandler} />
       </div>

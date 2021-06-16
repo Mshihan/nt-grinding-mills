@@ -34,3 +34,17 @@
   color: red !important;
   background-color: red !important;
 } */
+
+.rdt_TableHeadRow {
+  background-color: #12192c !important;
+}
+
+.rdt_TableCol {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+}
+
+.rdt_TableCol :hover {
+  color: beige !important;
+}

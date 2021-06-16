@@ -5,6 +5,12 @@ import { useState } from "react";
 import HashLoader from "react-spinners/HashLoader";
 import { css } from "@emotion/react";
 import Alerts from "../../../components/Alerts/Alerts";
+import Inputs, {
+  TextArea,
+  SelectInput,
+  SubmitButton,
+  CancelButton,
+} from "../../../components/FormComponents/Inputs";
 
 // import Table from "./Data/Table";
 // import Data from "./Data/Data";
@@ -26,20 +32,40 @@ const AddCustomerForm = (props) => {
       showAlertMessage();
     }, 3000);
   };
-
+  //Alert Message Display
   const showAlertMessage = () => {
     setShowAlert(true);
-
     setTimeout(() => {
       setShowAlert(false);
     }, 2000);
   };
+
   const spinnerCss = css`
     display: block;
     margin: 0 auto;
     margin-bottom: 2rem;
-    border-color: red;
   `;
+
+  const titleDesignations = [
+    "-Select-",
+    "Ms",
+    "Mrs",
+    "Miss",
+    "Dr",
+    "Rev",
+    "Other",
+  ];
+
+  const paymentType = [
+    "-Select-",
+    "Cash",
+    "Credit",
+    "Cheque",
+    "Due on Recipt",
+    "Advance",
+  ];
+
+  const customerType = ["-Select-", "Cash", "Company"];
   const alertMessage = "Added customer successfully";
   const alertColor = "success";
   return (
@@ -63,89 +89,31 @@ const AddCustomerForm = (props) => {
             <div className="row">
               <h4 className="text-center text-uppercase"> Add Customer</h4>
               <div className=" col-lg-4">
-                {/* Customer Type */}
-                <div class="form-group">
-                  <label>Customer Type</label>
-                  <select id="customerType" class="form-control">
-                    <option>-Select-</option>
-                    <option>Cash</option>
-                    <option>Company</option>
-                  </select>
-                </div>
-                {/* Title */}
-                <div class="form-group">
-                  <label>Title</label>
-                  <select class="form-control">
-                    <option>-Select-</option>
-                    <option>Ms</option>
-                    <option>Mrs</option>
-                    <option>Miss</option>
-                    <option>Dr</option>
-                    <option>Rev</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                {/* Customer Name */}
-                <div className="form-group">
-                  <label>Customer Name</label>
-                  <input className="form-control" type="text" required />
-                </div>
+                <SelectInput label="Customer Type" options={customerType} />
+                <SelectInput label="Title" options={titleDesignations} />
+                <Inputs label="Customer Name" type="text" />
               </div>
               <div className="col-lg-4">
-                <div class="form-group">
-                  <label>Address</label>
-                  <textarea type="text" className="form-control" />
-                </div>
+                <TextArea label="Address" type="text" />
 
-                <div class="form-group">
-                  <label>Customer Mobile</label>
-                  <input type="number" className="form-control" />
-                </div>
-
-                <div class="form-group">
-                  <label>Customer Phone</label>
-                  <input type="number" className="form-control" />
-                </div>
-
-                <div class="form-group">
-                  <label>Customer Email</label>
-                  <input type="email" className="form-control" />
-                </div>
+                <Inputs label="Customer Mobile" type="number" />
+                <Inputs label="Customer Phone" type="number" />
+                <Inputs label="Customer Email" type="email" />
               </div>
               <div className=" col-lg-4">
-                <div class="form-group">
-                  <label>Payment</label>
-                  <select id="payment" class="form-control" type="dropdown">
-                    <option>-Select-</option>
-                    <option>Cash</option>
-                    <option>Credit</option>
-                    <option>Cheque</option>
-                    <option>Due on Recipt</option>
-                    <option>Advance</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label>Remark</label>
-                  <textarea type="text" className="form-control" />
-                </div>
+                <SelectInput label="Payment" options={paymentType} />
+                <TextArea label="Remark" type="text" />
               </div>
             </div>
             <div className="row">
               <div className="d-flex justify-content-end my-4">
-                <button
-                  type="submit"
-                  className="btn btn-sm btn-outline-primary mx-3"
-                >
-                  Submit
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-danger btn-sm"
-                  onClick={props.onClickCloseAddNewCustomerForm}
-                >
-                  Cancel
-                </button>
+                <SubmitButton title="Submit" />
+                <CancelButton
+                  title="Cancel"
+                  onClickCloseAddNewCustomerForm={
+                    props.onClickCloseAddNewCustomerForm
+                  }
+                />
               </div>
             </div>
           </div>
@@ -154,7 +122,7 @@ const AddCustomerForm = (props) => {
 
       <div
         className="mx-2 px-4 mt-4 border border-dark py-3"
-        style={{ backgroundColor: "#DBDBDB" }}
+        // style={{ backgroundColor: "#DBDBDB" }}
       >
         <Table data={Data} click={clickhandler} />
       </div>
