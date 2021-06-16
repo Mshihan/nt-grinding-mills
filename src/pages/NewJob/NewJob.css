@@ -1,0 +1,14 @@
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.addJobForm {
+  margin-top: 20px;
+  background: #cccccc;
+}

@@ -56,3 +56,14 @@ export const CancelButton = (props) => {
 };
 
 export default Input;
+
+export const SelectInputRow = (props) => {
+  const { options } = props;
+  return (
+    <select class="form-control">
+      {options.map((dropdownOption) => {
+        return <option>{dropdownOption}</option>;
+      })}
+    </select>
+  );
+};
